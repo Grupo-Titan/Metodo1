@@ -20,16 +20,14 @@
       text-align: center;
     }
 
-    .logo {
-      width: 80px;
+    .profile {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
       margin-bottom: 20px;
-      animation: bounce 1s infinite;
-    }
-
-    @keyframes bounce {
-      to {
-        transform: translateY(-10px);
-      }
+      border: 3px solid white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
 
     .message {
@@ -40,13 +38,13 @@
   <script>
     setTimeout(function () {
       const phone = '5491162315972';
-      const message = `Hola%20quiero%20mi%20usuario%20y%20bono%20del%2050%25%20%F0%9F%98%89`;
+      const message = encodeURIComponent('Hola quiero mi usuario y bono del 50% 😉');
       window.location.href = `https://api.whatsapp.com/send?phone=${phone}&text=${message}`;
     }, 2000);
   </script>
 </head>
 <body>
-  <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" />
+  <img class="profile" src="profile_picture.jpg" alt="Foto de perfil" />
   <div class="message">
     Conectando con WhatsApp...<br />
     ¡Te llevamos con tu bono del 50%!
