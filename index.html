@@ -41,7 +41,7 @@
     setTimeout(function () {
       const phone = '5491162315972';
       const message = encodeURIComponent('Quiero jugar con mi bono del 50%');
-      window.location.href = `https://wa.me/${phone}?text=${message}`;
+      window.location.href = `https://api.whatsapp.com/send?phone=${phone}&text=${message}`;
     }, 2000);
   </script>
 </head>
